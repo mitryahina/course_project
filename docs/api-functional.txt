@@ -1,0 +1,52 @@
+The main API that I will use is News API (newsapi.org)
+
+Using this API:
+
+It is possible to search for articles with such criteria:
+Keyword or phrase
+Date published
+Source name
+Source domain name
+Language
+
+Results cam be sorted by:
+Date published
+Relevancy to search keyword
+Popularity of source
+
+Endpoints:
+
+Top headlines  - returns breaking news headlines for a country and category.
+
+                 Request parameters: country(The 2-letter ISO 3166-1 code
+                                     category(Possible options: business, entertainment, general, health, science,
+                                     sports, technology)
+                                     sources(A comma-seperated string of identifiers for the news sources or blogs,
+                                     can't be mixed with country or category params)
+                                     q(Keywords or a phrase to search for)
+                                     pageSize(The number of results to return per page)
+                 Response: status(If the request was successful or not)
+                           totalResults(The total number of results available for your request)
+                           articles(The results of the request)
+                           source(The id and a name for the source this article came from)
+                           author(The author of the article)
+                           title(The headline or title of the article)
+                           description(A description or snippet from the article)
+                           url(The direct URL to the article)
+                           urlToImage(The URL to a relevant image for the article)
+                           publishedAt(The date and time that the article was published)
+
+
+Everything  - search through millions of articles from over 5,000 large and small news sources and blogs
+
+              Request parameters: q(Keywords or a phrase to search for),
+                                  sources(A comma-seperated string of identifiers for the news sources or blogs),
+                                  domains(A comma-seperated string of domains to restrict the search to),
+                                  from/to(A date and optional time for the oldest/newest article allowed),
+                                  language(The 2-letter ISO-639-1 code of the language you want to get headlines)
+                                  sortBy(The order to sort articles. Options: relevancy, popularity, publishedAt)
+                                  pageSize(The number of results to return per page)
+
+
+Sources - returns information (including name, description, and category) about the most notable sources indexed.
+This list could be used to show users options available.

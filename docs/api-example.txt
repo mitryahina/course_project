@@ -1,0 +1,23 @@
+In the module API-trial.py realized the vitable API capacities.
+
+At first, NewsApiClient is imported from the newsapi and initialized
+by my unique API key.
+
+Sample functions get_headlines(), get_all_articles() and sources() are
+creaated to show the basic capacities of newsapi.
+
+get_headlines() function uses top headlines endpoint. It is specified
+with parameters q(keyword phrase) and language. At the day of executing
+I have found 7 top headlines about bitcoin(default value). Besides that
+I received an information about status of request, name and id of source,
+author, title, url and date of publishing for each article.
+
+get_all_articles() function returns all articles by the given keyword,
+from the given sources and domains between the given dates. It also has
+a parameter of language, sorting key and the number of pages to be
+returned. I received an information about status of request, name,
+description, url and id of source; author, title, url, description
+and date of publishing for each article.
+
+sources() function returns information aout the sources(including name,
+description, category, language, country and url).

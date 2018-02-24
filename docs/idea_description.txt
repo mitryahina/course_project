@@ -1,0 +1,21 @@
+                           Your news
+In the time of overwhelming amounts of information you will probably
+need to move with times and be aware of the most important changes
+and events which society faces. But mass media now are often leg behind,
+some duplicate or replicate information, others just cannot cover everything
+you are interested in. Also, reading a lot of separate news sources is often
+tiring and takes too much time.
+My suggestion is to create a web-site, which will contain the most top-rated
+news only from the reliable sources. The initial version will use News API
+(newsapi.org) for extracting articles from over 5,000 large and small news
+sources and blogs, which include breaking news as well as lesser articles.
+The web-site will have powerful sorting mechanisms to personalize news.
+Sorting will be realized according to such keys: country of origin,
+category(e.g. business, entertainment, general),sources, keywords or
+phrases to look for, language.
+In perspective, it is possible to use APIs of social media, such as
+Twitter, Facebook, Reddit to include not only 'professional' media
+but also news from ordinary users, who are often in the cutting edge.
+These posts would be able to search by hash-tags and usernames. Top of events
+discussed in social media will also be automatically generated.
+
