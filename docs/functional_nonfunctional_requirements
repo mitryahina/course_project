@@ -1,0 +1,16 @@
+Functional requirements
+    System must find top headlines from the news and their locations
+    System must extract Twitter trends from certain locations
+    System must match locations of headlines with the Twitter trends
+    System must analyze the correlations between news and trends
+    System must vizualize the most important endpoints of the research in map and plots
+
+
+Non-functional requirements
+    The system should be able to work on any Web browser
+    The system should be available for use 24 hours per day,
+    365 days per year
+    Any interaction between the user and the system should
+    not exceed 5 seconds
+    System will use information only from public accouunts
+    No authorization is needed to see the results 
