@@ -1,0 +1,53 @@
+Формат json
+json(JavaScript Object notation) is a data format often used by APIs.
+Python module json has an ability to encode and decode data of json format.
+
+Functions:
+json.dump() - takes a file-like object and produce a string.
+json.dumps() takes an object and produces a string.
+json.load() - takes a file-like object, reads the data from that object, and uses that string to create an object.
+json.loads() - takes a string and using it creates an object.
+
+Classes:
+json.JSONDecoder
+Performs following convertions: object->dict, array->list, string->str, number(int)->int,
+                                number(real)->float, true->True, false->False, null->None.
+                                
+       decode() - return the Python string representation of argument(JSON document).
+                  JSONDecodeError will be raised if the given JSON document is not valid.
+
+       raw_decode() - decode a JSON from string and return 2-tuple of the Python representation
+                      and the index in s where the document ended. Can be used ifJson has 
+                      extra data at the end.
+                      
+json.JSONEncoder
+Performs convertirons of Python structures into JSON structures(e.g. dict->object,
+                                                                     list->array...)
+        encode() - return a JSON string representation of a Python data structure.
+        iterencode() - encode the given object, o, and yield each string representation as available
+
+
+Формат xml
+
+
+Формат html
+HTML - HyperText Mark-up Language
+Python module for parsing html and xhtml contains:
+
+class html.parser.HTMLParser
+Creates instance to parse invalid markup.
+Its methods may be overriden by user to implement desired behaiour(e.g. tags to be handled)
+
+Methods:
+feed() - takes string data to be feed to parser.
+close() - force additional processing at the end of the file.
+reset() - reset the instance loosing all unprocessed data.
+getpos() - return current line number.
+get_starttag_text() - return text of recently opened start tag. 
+handle_data() - process arbitrary data.
+handle_entityref() - process a named character reference of the form &name.
+handle_charref() - process decimal and hexadecimal numeric character references.
+unknown_decl() - this method is called when an unrecognized declaration is read by the parser.
+handle_comment() - this method is called when a comment is encountered.
+handle_decl() - this method is called to handle an HTML doctype declaration
+
