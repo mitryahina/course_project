@@ -1,1 +1,18 @@
-
+News API returns json containing:
+ status(If the request was successful or not)
+ totalResults(The total number of results available for your request)
+ articles(The results of the request)
+ source(The id and a name for the source this article came from)
+ author(The author of the article)
+ title(The headline or title of the article)
+ description(A description or snippet from the article)
+ url(The direct URL to the article)
+ urlToImage(The URL to a relevant image for the article)
+ publishedAt(The date and time that the article was published)
+ 
+Twitter trends API returns json containing:
+ name (name of the trending topic)
+ url (url to search results provided by Twitter for the topic)
+ promoted_content (additional content)
+ query
+ tweet_volume 
