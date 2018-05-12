@@ -1,4 +1,8 @@
+# Module for headlines representations
 def read_file(path):
+    """
+    Reads file with news
+    """
     with open(path, 'r', encoding='UTF-8', errors='ignore') as f:
         data = f.read()
         data = data[data.index("[") + 1:-2].split('}')
@@ -7,6 +11,9 @@ def read_file(path):
 
 
 def parse(headline):
+    """
+    Extracts needed data from a string
+    """
     source = headline[0][headline[0].find("'name':") + 9:-1]
     title = headline[1][headline[1].find("'title':") + 10:
                         headline[1].find("'description'") - 3]
@@ -18,6 +25,10 @@ def parse(headline):
 
 
 class Headline:
+    """
+    Represents a headline using its title, short description,
+    source and url
+    """
     def __init__(self, title, source, url, description):
         self.title = title
         self.source = source
@@ -30,6 +41,9 @@ class Headline:
 
 
 class DayHeadlines:
+    """
+    Contains all the headlines for a day
+    """
     def __init__(self, path, date):
         self.date = date
         self.headlines = []
