@@ -1,3 +1,4 @@
+# Module to get worldwide Twitter trends
 import tweepy
 
 consumer_key = "x"
