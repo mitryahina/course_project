@@ -2,7 +2,7 @@
 from newsapi import NewsApiClient
 
 # Initializing
-newsapi = NewsApiClient(api_key='ce605f777cfe45f7883bdebddc674fed')
+newsapi = NewsApiClient(api_key='Paste your api-key here')
 
 
 def get_headlines():
