@@ -1,0 +1,25 @@
+Опис даних, зібраних для дослідження
+
+Під час дослідження було проаналізовано дані отримані від News API та Twitter API з 8 до 25 травня.
+Дані збиралися один раз в день ~ в 20.00
+
+Twitter API надає дані про 50 найпопулярніших трендів за певною локацією. 
+Для дослідження використано загальносвітові тренди (location=1).
+Типова інформація про тренд виглядає так:
+
+  'name': '#LOVE_YOURSELF', 'url': 'http://twitter.com/search?q=%23LOVE_YOURSELF',
+  'promoted_content': None, 'query': '%23LOVE_YOURSELF', 'tweet_volume': 1453249
+  
+Тобто містить назву (хештег), url-посилання на результати пошуку за відповідним
+трендом, інформацію про промоцію та показник значущості tweet_volume.
+
+News API надає ~850 результатів по найпопулярніших новинах.
+Типовий представленн однієї новини виглядає так:
+{'source': {'id': 'national-geographic', 'name': 'National Geographic'}, 'author': None,
+'title': 'What Is UNESCO World Heritage?', 'description': "From masterpieces of creative genius
+to beautiful natural landscapes, these sites reveal the most compelling chapters of Earth's 
+history.", 'url': 'https://www.nationalgeographic.com/travel/world-heritage/about.html', 
+'urlToImage': 'https://www.nationalgeographic.com/content/dam/travel/photos/000/067/6741.jpg',
+'publishedAt': '2018-05-13T21:07:10.365104Z'}
+Тобто містить джерело, автора, заголовок, короткий опис, url - посилання на новину та на посилання
+до зображення і дату публікації.
