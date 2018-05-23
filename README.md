@@ -7,6 +7,7 @@ Using the NewsApi(https://newsapi.org/) and Twitter API through tweepy(http://ww
 get everyday data and then find correlations among it.
 
 Modules: 
+
 twitter_geo.py - is used to get worldwide Twitter trends.
                  Based on Tweepy function trends_place(location)
               
@@ -23,4 +24,18 @@ headline.py - store realization of Headline class and methods
 compare.py - contains main functions for linguitic analysis.
 
 main.py -  One Module to rule them all, One Module to find them,
-           One Module to bring them all and in the darkness bind them
+           One Module to bring them all and in the darkness bind them.
+           
+data_parsing.py - allows to work with the results, which APIs return in json 
+                  format
+           
+Folders:
+
+data - news and trends collected from 8 to 25 of May, 2018.
+
+results - results of comparison news and trends for each day. 
+          A headline and a trend are considered similar if similarity
+          coefficient returned by the compare() function in compare.py
+          is greater than 0.4 Then the headline and trend are written 
+          to a file in format 'headline trend coefficient'.
+          
