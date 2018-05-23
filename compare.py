@@ -1,3 +1,5 @@
+# Used for semantic analysis of news and trends
+
 from nltk.tokenize import TweetTokenizer
 import re
 import nltk
