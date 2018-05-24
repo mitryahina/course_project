@@ -28,6 +28,13 @@ main.py -  One Module to rule them all, One Module to find them,
            
 data_parsing.py - allows to work with the results, which APIs return in json 
                   format
+                  
+app.py - Flask app, which allows to show results of comparison as a words clouds.
+        #toDo: ability to submit date in an app and dynamically show the results.
+        The reason for not making an app fully dynamical is that to the time of
+        API's response is about 3 seconds and then it takes about 15 minutes to
+        analyze ~ 40 000 combinations of news and trends, so the response time of 
+        the app would be undecent.
            
 Folders:
 
@@ -38,4 +45,10 @@ results - results of comparison news and trends for each day.
           coefficient returned by the compare() function in compare.py
           is greater than 0.4 Then the headline and trend are written 
           to a file in format 'headline trend coefficient'.
+          
+templates - HTML templates for Flask app
+
+static/js, static/css - web-folders for app
+          
+  
           
