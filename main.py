@@ -9,6 +9,9 @@ now = datetime.datetime.now()
 
 
 def get_data(location=1):
+    """
+    Get today's data
+    """
     global now
 
     with open("data/news_{}_{}_{}.txt".format(now.day, now.month, now.year),
@@ -43,6 +46,9 @@ def get_trends_obj(day=None, month=None, year=None):
 
 
 def compare_daily(day=None, month=None, year=None):
+    """
+    Compare each headline with each trend 
+    """
     headlines = create_headlines_obj(day, month, year)
     trends = get_trends_obj(day, month, year)
     similar = []
@@ -58,6 +64,9 @@ def compare_daily(day=None, month=None, year=None):
 
 
 def write_results(day=None, month=None, year=None):
+    """
+    Write results of comparison to file
+    """
     global now
     if not day or not month or not year:
         day = now.day
@@ -71,22 +80,16 @@ def write_results(day=None, month=None, year=None):
             f.write(s)
 
 
-# get_data()
-
-def menu():
-    print("Choose options: \n1) get today's data\n2) analyze today's data\n"
-          "3) show analysis results\n4) exit")
-    action = input()
-    while action not in ['1', '2', '3', '4']:
-        action = input('Wrong option! Try again: ')
-
+def menu(action):
     if action == '1':
         print('Retrieving results...')
         get_data()
+        return True
 
     if action == '2':
         print('Analyzing files. This might take a while')
         write_results()
+        return True
 
     if action == '3':
         day, month, year = input('Enter the date separated by a'
@@ -94,11 +97,21 @@ def menu():
         with open('results/result_{}_{}_{}.txt'.format(day, month, year)) as f:
             for line in f:
                 print(line)
+            return True
 
     if action == '4':
         return False
 
 
+def show_menu():
+    print("Choose options: \n1) get today's data\n2) analyze today's data\n"
+          "3) show analysis results\n4) exit")
+    action = input()
+    while action != '4':
+        while action not in ['1', '2', '3', '4']:
+            action = input('Wrong option! Try again: ')
+    return menu(action)
+
+
 if __name__ == '__main__':
-    while True:
-        menu()
+    show_menu()
